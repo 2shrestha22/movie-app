@@ -49,32 +49,31 @@ class _App extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: "Movies App",
-        home: Scaffold(
-            body: SafeArea(
-          child: ListView(children: [
-            SizedBox(height: 5),
-            CAppBar(),
-            SizedBox(height: 10),
-            Text(
-              "Find Movies,TV Shows",
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                  fontSize: 20),
+      debugShowCheckedModeBanner: false,
+      title: "Movies App",
+      home: Scaffold(
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(height: 5),
+                CAppBar(),
+                SizedBox(height: 10),
+                Text(
+                  "Find Movies,TV Shows and\nmore",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                      fontSize: 20),
+                ),
+                SizedBox(height: 5),
+                SEARCHBAR(),
+                MoviesWidget(movies: _movies)
+              ],
             ),
-            Text(
-              "and more",
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                  fontSize: 20),
-            ),
-            SizedBox(height: 5),
-            SEARCHBAR(),
-            MoviesWidget(movies: _movies)
-          ]),
-        )));
+          ),
+        ),
+      ),
+    );
   }
 }
