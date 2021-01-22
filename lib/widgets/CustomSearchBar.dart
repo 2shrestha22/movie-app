@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SEARCHBAR extends StatefulWidget {
+class SearchBar extends StatefulWidget {
   @override
-  _SEARCHBARState createState() => _SEARCHBARState();
+  _SearchBarState createState() => _SearchBarState();
 }
 
-class _SEARCHBARState extends State<SEARCHBAR> {
+class _SearchBarState extends State<SearchBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,11 +15,14 @@ class _SEARCHBARState extends State<SEARCHBAR> {
         borderRadius: BorderRadius.circular(18),
       ),
       child: TextField(
-          decoration: InputDecoration(
-        hintText: "Search Food",
-        prefixIcon: Icon(Icons.search),
-        border: InputBorder.none,
-      )),
+        decoration: InputDecoration(
+          hintText: "Search Movies",
+          prefixIcon: Icon(Icons.search),
+          border: InputBorder.none,
+        ),
+        //to enable search button in keyboard
+        textInputAction: TextInputAction.search,
+      ),
     );
   }
 }
