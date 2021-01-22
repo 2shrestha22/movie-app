@@ -58,14 +58,7 @@ class _App extends State<App> {
             CAppBar(),
             SizedBox(height: 10),
             Text(
-              "Find Movies,TV Shows",
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                  fontSize: 20),
-            ),
-            Text(
-              "and more",
+              "  Find Movies,TV Shows\n  and more",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
@@ -73,7 +66,7 @@ class _App extends State<App> {
             ),
             SizedBox(height: 5),
             SEARCHBAR(),
-            MoviesWidget(movies: _movies)
+            // MoviesWidget(movies: _movies)
           ]),
         )));
   }
