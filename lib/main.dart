@@ -73,7 +73,7 @@ class _App extends State<App> {
             ),
             SizedBox(height: 5),
             SEARCHBAR(),
-            MoviesWidget(movies: _movies)
+            // MoviesWidget(movies: _movies)
           ]),
         )));
   }
